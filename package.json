@@ -1,0 +1,25 @@
+{
+  "name": "alarmbot",
+  "version": "0.0.1",
+  "description": "A reminder bot",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "pm2 dist/index.js",
+    "build": "tsup src/index.ts --minify",
+    ".": "npm run build && pm2 start -n alarmbot dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "pm2": "^5.3.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  }
+}
