@@ -7,14 +7,14 @@ import {
 export const data = new SlashCommandBuilder()
   .setName("setalarm")
   .setDescription("Sets an alarm")
-  .addStringOption(
-    new SlashCommandStringOption()
+  .addStringOption((option) =>
+    option
       .setName("in")
       .setDescription("The time from now to set the alarm - Format: 1w2d3h4m5s")
       .setRequired(true)
   )
-  .addStringOption(
-    new SlashCommandStringOption()
+  .addStringOption((option) =>
+    option
       .setName("note")
       .setDescription("Any information to be reminded of at time of alarm")
   );
